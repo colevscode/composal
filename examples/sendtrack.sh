@@ -8,6 +8,6 @@
 
 trap "kill 0" EXIT
 
-../composal -port 8088 & curl --data "@$1" http://localhost:8088/play > $2 
+../composal -port 8088 & curl --data "@$1" http://localhost:8088/render > $2 
 sleep 1
 play $2

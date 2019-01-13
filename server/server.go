@@ -15,7 +15,7 @@ type Payload struct {
 	Tracks []track.Track `json:"tracks"`
 }
 
-func Play(w http.ResponseWriter, r *http.Request) {
+func Render(w http.ResponseWriter, r *http.Request) {
 	var payload Payload
 
 	err := json.NewDecoder(r.Body).Decode(&payload)
@@ -28,7 +28,7 @@ func Play(w http.ResponseWriter, r *http.Request) {
 		player.AddTrack(&t)
 	}
 
-	player.Play(0, w)
+	player.Render(0, w)
 
 	// Mirror back json just for debugging
 	// js, err := json.Marshal(payload)
@@ -42,11 +42,9 @@ func Play(w http.ResponseWriter, r *http.Request) {
 
 func RunServer(port int, debug bool) {
 	address := fmt.Sprintf(":%d", port)
-	if debug {
-		fmt.Fprintln(os.Stderr, "Opening server on", address)
-	}
+	fmt.Fprintln(os.Stderr, "Opening server on", address)
 
 	router := mux.NewRouter()
-	router.HandleFunc("/play", Play).Methods("POST")
+	router.HandleFunc("/render", Render).Methods("POST")
 	http.ListenAndServe(address, router)
 }

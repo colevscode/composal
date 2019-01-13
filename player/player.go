@@ -62,12 +62,9 @@ func AddTrack(track *track.Track) {
 	}
 }
 
-func Play(start time.Duration, output io.Writer) {
-	if debugging {
-		fmt.Fprintf(os.Stderr, "Starting playback. Total time %v\n", totalTime)
-	}
-
+func Render(start time.Duration, output io.Writer) {
 	trailingTime := time.Duration(time.Second)
+	fmt.Fprintf(os.Stderr, "Rendering audio. Total time %v\n", totalTime+trailingTime)
 
 	defer Teardown()
 	mix.Start()
