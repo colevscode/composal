@@ -1,0 +1,46 @@
+{
+  "tracks": [
+    {
+      "type": "samples",
+      "samples": {
+        "kick1": "TR 808 Kit/TR 808 Kick 02.wav",
+        "kick3": "TR 808 Kit/TR 808 Kick 03.wav",
+        "marac": "TR 808 Kit/TR 808 Marcas.wav",
+        "snare": "TR 808 Kit/TR 808 Snare 01.wav",
+        "hitom": "TR 808 Kit/TR 808 Tom 03.wav",
+        "lotom": "TR 808 Kit/TR 808 Tom 01.wav",
+        "clhat": "TR 808 Kit/TR 808 Closed Hat 02.wav"
+      },
+      "pattern": [
+        {
+          "begin": 1000,
+          "duration": 0,
+          "sample": "kick3",
+          "volume": 1,
+          "pan": 0
+        },
+        {
+          "begin": 2000,
+          "duration": 0,
+          "sample": "kick1",
+          "volume": 1,
+          "pan": 0
+        },
+        {
+          "begin": 3000,
+          "duration": 0,
+          "sample": "kick1",
+          "volume": 1,
+          "pan": 1
+        },
+        {
+          "begin": 4000,
+          "duration": 0,
+          "sample": "kick1",
+          "volume": 1,
+          "pan": 0
+        }
+      ]
+    }
+  ]
+}
