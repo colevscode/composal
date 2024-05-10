@@ -20,6 +20,20 @@
           "pan": 0
         },
         {
+          "begin": 1200,
+          "duration": 0,
+          "sample": "kick3",
+          "volume": 1,
+          "pan": 0
+        },
+        {
+          "begin": 1400,
+          "duration": 0,
+          "sample": "kick3",
+          "volume": 1,
+          "pan": 0
+        },
+        {
           "begin": 2000,
           "duration": 0,
           "sample": "kick1",
